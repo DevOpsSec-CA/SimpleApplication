@@ -17,7 +17,7 @@ jobs:
       - image: circleci/node:10.16.3
     steps:
       -checkout
-      -run:
+      - run:
           name: update-npm
           command: 'sudo npm install -g npm@5'
       - restore_cache:
