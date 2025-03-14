@@ -75,9 +75,9 @@ if(process.env.ENV !== "DEV") {
   console.log(typeof privatekey)
   var cert = fs.readFileSync('server.crt', "utf8")
   console.log("DEBUG: privatekey before split:", privatekey);
-  console.log("DEBUG: footer value:", footer);
   var header = "-----BEGIN PRIVATE KEY-----"
   var footer = "-----END PRIVATE KEY-----"
+  console.log("DEBUG: footer value:", footer);
   console.log(privatekey.split(header))
   privatekey= privatekey.split(header)[1]
   privatekey = privatekey.split(footer)[0]
