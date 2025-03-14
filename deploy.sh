@@ -17,3 +17,5 @@ echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
 # Start application with name simple_app 
 pm2 start ./bin/www --name simple_app --env=production
+#Checking what port the application is using
+sudo netstat -tulnp | grep node
