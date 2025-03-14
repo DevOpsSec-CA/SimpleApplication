@@ -6,8 +6,12 @@ sudo npm install -g pm2
 cd SimpleApplication
 # Install app dependencies
 npm install
+# Stop any running process named 'simple_app'
+pm2 stop simple_app
+# Delete any running processes with the same name
+pm2 delete simple_app
 # Gain private key and server certificate from CircleCi environment variables
 echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
 # Start application with name simple_app 
-pm2 start./bin/www --name simple_app
+pm2 start ./bin/www --name simple_app
