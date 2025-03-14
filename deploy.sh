@@ -16,4 +16,4 @@ pm2 delete simple_app
 echo $PRIVATE_KEY > privatekey.pem
 echo $SERVER > server.crt
 # Start application with name simple_app 
-pm2 start ./bin/www --name simple_app
+pm2 start ./bin/www --name simple_app --env=production
