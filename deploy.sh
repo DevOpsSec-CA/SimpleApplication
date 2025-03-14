@@ -6,6 +6,8 @@ sudo npm install -g pm2
 cd SimpleApplication
 # Install app dependencies
 npm install
+# Listen on port 3000
+sudo iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j REDIRECT --to-port 3000
 # Stop any running process named 'simple_app'
 pm2 stop simple_app
 # Delete any running processes with the same name
