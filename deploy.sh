@@ -19,3 +19,4 @@ echo $SERVER > server.crt
 pm2 start ./bin/www --name simple_app --env=production
 # Logging to see why I cannot establish client-server with DNS address on browser
 pm2 logs simple_app
+# Additional line to push to main to trigger pipeline as AWS lab was not on the last push
